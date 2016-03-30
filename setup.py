@@ -4,6 +4,7 @@ from distutils.core import setup
 
 setup(name='devicehub',
       version='0.8.7',
+      description='DeviceHub python library for v1 APIs',
       package_dir={'devicehub': 'devicehub'},
       packages=['devicehub'],
       install_requires=['httplib2', 'paho-mqtt', 'requests'],
