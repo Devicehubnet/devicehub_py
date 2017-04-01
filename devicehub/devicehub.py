@@ -1,4 +1,6 @@
 #!/usr/bin/python
+from __future__ import print_function
+
 import paho.mqtt.client as mqtt
 from time import sleep, time
 from datetime import datetime
@@ -359,7 +361,7 @@ class Device(object):
         for k, act in self.actuators.items():
             print(k)
             print(act['topic'])
-        print()
+        print
         ""
 
 
