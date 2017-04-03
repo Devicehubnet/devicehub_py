@@ -1,4 +1,6 @@
 #!/usr/bin/python
+from __future__ import print_function
+
 import paho.mqtt.client as mqtt
 from time import sleep, time
 from datetime import datetime
@@ -407,7 +409,7 @@ class Actuator(object):
         self.callback = None
 
     def default_callback(self, *args):
-        message = args[2].payload
+        message = args[2].payload.decode()
 
         try:
             payload = json.loads(message)
